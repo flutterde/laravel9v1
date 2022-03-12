@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/terms' , [PagesController::class , 'terms']);
+Route::get('/policy' , [PagesController::class , 'policy']);
